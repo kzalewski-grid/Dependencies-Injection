@@ -5,7 +5,7 @@ export class HTTP {
   logger: Logger;
   apiConfig: ApiConfig;
 
-  static $inject = ['logger'];
+  static $inject = ['logger', 'apiConfig'];
 
   constructor(logger: Logger, apiConfig: ApiConfig) {
     this.apiConfig = apiConfig;

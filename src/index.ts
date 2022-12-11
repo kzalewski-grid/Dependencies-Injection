@@ -19,6 +19,9 @@ const renderUsers = async () => {
 };
 
 const app = () => {
+  const config = (window as any).__CONFIG__;
+  delete (window as any).__CONFIG__;
+  ioc.register("apiConfig", config.api);
   renderUsers();
 };
 
